@@ -2,5 +2,5 @@
 
 A tool to make playing Catan easier.  
 It has two functions.  
-The first is to randomly display the two dice rolls.  
-The second displays a list of scores. (Manual scoring.)  
+1. Display the two dice rolls.  
+2. Display the list of scores. (Manual scoring.)    
