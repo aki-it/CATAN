@@ -35,7 +35,7 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .padding()
                         .foregroundColor(.black)
-                        .background(Capsule().foregroundColor(.white))
+                        .background(Rectangle().foregroundColor(.white))
             }
             Text(" ")
             
@@ -63,10 +63,14 @@ struct ContentView_Previews: PreviewProvider {
 
 struct MySheet: View{
     var body: some View {
-        ZStack {
+        VStack {
             Color.white
             Text("Score")
                 .font(.largeTitle)
+            List {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
+            }
+            
         }
     }
 }
