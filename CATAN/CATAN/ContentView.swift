@@ -10,6 +10,8 @@ import UserNotifications
 
 
 struct ContentView: View {
+    
+    //Dice pattern
     let dice1 = ["1", "2", "3", "4", "5", "6"]
     let dice2 = ["1", "2", "3", "4", "5", "6"]
     let plus = " + "
@@ -17,6 +19,7 @@ struct ContentView: View {
     @State private var number = " "
     @State private var showSheet = false
     
+    //score
     @State private var value1 = 0
     @State private var value2 = 0
     @State private var value3 = 0
@@ -25,9 +28,11 @@ struct ContentView: View {
     var score2 :[Int] = [0,1,2,3,4,5,6,7,8,9,10]
     var score3 :[Int] = [0,1,2,3,4,5,6,7,8,9,10]
     var score4 :[Int] = [0,1,2,3,4,5,6,7,8,9,10]
-    
+
+    //color pattern
     let colors: [Color] = [.red, .green, .blue, .yellow]
 
+    //inc dec funcs
     func incrementStep1() {
         value1 += 1
         if value1 >= score1.count { value1 = 0 }
@@ -83,6 +88,7 @@ struct ContentView: View {
             }
             
             Button(action: {
+                
                 let content = UNMutableNotificationContent()
                 content.sound = UNNotificationSound.default
                 
@@ -129,13 +135,34 @@ struct ContentView: View {
                 .background(colors[3])
             
             }
+            
+            //history
+            Button(action: {
+                self.showSheet.toggle()
+            }) {
+                Text("History")
+                    .font(.caption)
+            }
+            .sheet(isPresented: $showSheet) {
+                MySheet()
+            }
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
+        }
+    }
+}
+
+struct MySheet: View {
+    var body: some View {
+        ZStack {
+            Text("test")
+                .font(.caption)
         }
     }
 }
