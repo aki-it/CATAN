@@ -163,18 +163,8 @@ struct ContentView: View {
             
             }
             
-            // History & score reset
+            //score reset
             VStack {
-                Button(action: {
-                    self.showSheet.toggle()
-                }) {
-                    Text("History")
-                        .font(.system(size: 40))
-                        .foregroundColor(.black)
-                }
-                .sheet(isPresented: $showSheet) {
-                    MySheet()
-                }
                 
                 Button(action: {
                     reset1()
