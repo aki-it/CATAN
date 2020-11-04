@@ -113,7 +113,7 @@ struct ContentView: View {
                 let content = UNMutableNotificationContent()
                 content.sound = UNNotificationSound.default
                 
-                var soundIdRing:SystemSoundID = 1022
+                var soundIdRing:SystemSoundID = 1100
                 if let soundUrl = CFBundleCopyResourceURL(CFBundleGetMainBundle(), nil, nil, nil){
                     AudioServicesCreateSystemSoundID(soundUrl, &soundIdRing)
                     AudioServicesPlaySystemSound(soundIdRing)
