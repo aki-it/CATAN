@@ -5,7 +5,7 @@ When Pushed the Dice buttom, show the result of two dice sum result.
 
 It has four functions.  
 1. Display the two dice rolls. 
-2. When the dice rolls, souud SE.
+2. When the dice rolls, sound SE.
 3. Display the list of scores. (Manual scoring.)    
 4. Reset all scores by touch the Reset buttom.
 
